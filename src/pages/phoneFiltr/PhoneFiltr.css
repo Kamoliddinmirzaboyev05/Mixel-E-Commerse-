@@ -1,0 +1,127 @@
+.phoneFilter .container {
+    padding-top: 200px;
+}
+
+.basicTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.basicTitleLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 25px 0px;
+}
+
+.basicTitleLeft div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.basicTitle p,
+i {
+    color: rgba(98, 99, 100, 1);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.smatfonTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.smatfonTitle1 {
+    display: flex;
+    gap: 100px;
+}
+
+.sent {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sent div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.smatfonTitleMenu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: rgba(144, 144, 144, 1);
+}
+
+.smartfonLeftSent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.smartfonLeft {
+    width: 300px;
+    border-width: 0px, 0px, 0px, 0px;
+    border-style: solid;
+    border-color: rgba(242, 242, 242, 1);
+    padding: 20px;
+
+}
+.smartfonLeftPrise{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(242, 242, 242, 1);
+    border-radius: 5px;
+    color: rgba(144, 144, 144, 1);
+}
+.ot{
+    border-right: 1px solid rgba(242, 242, 242, 1);
+    padding-right: 25px;
+}
+.smartfonLeftPrise p{
+    padding: 7px;
+}
+.zabrat{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(237, 55, 41, 1);
+    border-radius: 5px;
+    padding: 10px;
+}
+.brend{
+    padding-top: 20px;
+}
+.lg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.samsung{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.artel{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.huawei{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
