@@ -1,71 +1,69 @@
-
-import React from 'react'
+import React from "react";
 // import React, { useRef, useState } from 'react';
-import "./Home.css"
-import { Swiper, SwiperSlide } from 'swiper/react';
+import "./Home.css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 // import required modules
-import { Pagination, Navigation, Autoplay } from 'swiper/modules';
-import ProductCard from '../../components/productCard/ProductCard';
-import ProductBox from '../../components/productBox/ProductBox';
-import ProductPanel from '../../components/productPanel/ProductPanel';
-
-
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import ProductCard from "../../components/productCard/ProductCard";
+import ProductBox from "../../components/productBox/ProductBox";
+import ProductPanel from "../../components/productPanel/ProductPanel";
 
 function Home() {
   return (
     <div className="home">
       <div>
         <div className="hero">
-          <Swiper
-            slidesPerView={1}
-            spaceBetween={true}
-            autoplay={{
-              delay: 2000,
-              disableOnInteraction: false,
-            }}
-            loop={true}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-            modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
-          >
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-            <SwiperSlide><div className="container">
-
-            </div></SwiperSlide>
-          </Swiper>
+          <div className="container">
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={true}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper"
+            >
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="heroBanner"></div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
         <main>
           <section className="section1">
@@ -75,20 +73,19 @@ function Home() {
                 <p>Посмотреть все →</p>
               </div>
               <div className="Box1">
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
-              <ProductCard/>
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
+                <ProductCard />
               </div>
             </div>
           </section>
           <section className="section2">
-
             <div className="container">
               <h3>Популярные категории</h3>
               <div className="box2">
@@ -148,17 +145,16 @@ function Home() {
                 <p>Посмотреть все →</p>
               </div>
               <div className="Box4">
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-                <ProductBox/>
-
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
+                <ProductBox />
               </div>
             </div>
           </section>
@@ -173,14 +169,14 @@ function Home() {
                   <img src="/imgs/newHotRus 1.png" alt="" />
                 </div>
                 <div className="box5-2">
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
-                <ProductPanel/>
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
+                  <ProductPanel />
                 </div>
               </div>
             </div>
