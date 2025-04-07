@@ -20,7 +20,7 @@ function Dashboard() {
           <div className="accountSidebar">
             <div className="userData">
               <div className="iconImg">
-                <img src="/public/user.svg" alt="" />
+                <img src="/user.svg" alt="" />
               </div>
               <div className="userInfo">
                 <p>Shukurillo Tojonazarov</p>
@@ -29,7 +29,7 @@ function Dashboard() {
             </div>
             <div className="rowItem">
               <div className="iconImg">
-                <img src="/public/cart.svg" alt="" />
+                <img src="/cart.svg" alt="" />
               </div>
               <div className="userInfo">
                 <p>Мои рассрочки</p>
@@ -37,7 +37,7 @@ function Dashboard() {
             </div>
             <div className="rowItem">
               <div className="iconImg">
-                <img src="/public/file-text.svg" alt="" />
+                <img src="/file-text.svg" alt="" />
               </div>
               <div className="userInfo">
                 <p>Мои рассрочки</p>
@@ -45,7 +45,7 @@ function Dashboard() {
             </div>
             <div className="rowItem">
               <div className="iconImg">
-                <img src="/public/clock.svg" alt="" />
+                <img src="/clock.svg" alt="" />
               </div>
               <div className="userInfo">
                 <p>Мои рассрочки</p>
@@ -53,7 +53,7 @@ function Dashboard() {
             </div>
             <div className="rowItem">
               <div className="iconImg">
-                <img src="/public/log-out.svg" alt="" />
+                <img src="/log-out.svg" alt="" />
               </div>
               <div className="userInfo">
                 <p>Мои рассрочки</p>
@@ -66,7 +66,7 @@ function Dashboard() {
                 <div className="personalTop">
                   <div className="rowItem">
                     <div className="iconImg">
-                      <img src="/public/user.svg" alt="" />
+                      <img src="/user.svg" alt="" />
                     </div>
                     <div className="userInfo">
                       <p>Личные данные</p>
@@ -83,7 +83,7 @@ function Dashboard() {
                 <div className="personalTop">
                   <div className="rowItem">
                     <div className="iconImg">
-                      <img src="/public/credit-card.svg" alt="" />
+                      <img src="/credit-card.svg" alt="" />
                     </div>
                     <div className="userInfo">
                       <p>Моя карта</p>
@@ -100,7 +100,7 @@ function Dashboard() {
                 <div className="personalTop">
                   <div className="rowItem">
                     <div className="iconImg">
-                      <img src="/public/mail.svg" alt="" />
+                      <img src="/mail.svg" alt="" />
                     </div>
                     <div className="userInfo">
                       <p>Уведомления</p>
@@ -139,7 +139,7 @@ function Dashboard() {
                 <div className="personalTop">
                   <div className="rowItem">
                     <div className="iconImg">
-                      <img src="/public/truck.svg" alt="" />
+                      <img src="/truck.svg" alt="" />
                     </div>
                     <div className="userInfo">
                       <p>Адрес доставки</p>

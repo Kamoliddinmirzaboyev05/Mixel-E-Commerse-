@@ -5,7 +5,7 @@ function ProductPanel() {
     <>
       <div className="box5-1">
                     <img
-                      src="/public/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png"
+                      src="/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png"
                       alt=""
                     />
                     <div className="Box5Narx">

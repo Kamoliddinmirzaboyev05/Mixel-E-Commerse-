@@ -5,7 +5,7 @@ function ProductBox() {
     <>
     <div className="box4-1">
                   <img
-                    src="/public/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png"
+                    src="/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png"
                     alt=""
                   />
                   <div className="Box4Narx">

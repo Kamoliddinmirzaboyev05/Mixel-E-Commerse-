@@ -44,7 +44,7 @@ function Navbar() {
             <Link to={"/"}>
               <div className="logo">
                 <div>
-                  <img src="/public/imgs/logo.svg" alt="" />
+                  <img src="/imgs/logo.svg" alt="" />
                 </div>
                 <div>
                   <h2>MIXEL.UZ</h2>
@@ -137,7 +137,7 @@ function Navbar() {
                     <div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div ><  img src="/public/imgs/phone.svg" alt="" /></div>
+                          <div ><  img src="/imgs/phone.svg" alt="" /></div>
                           <div><p>Телефоны, планшеты</p></div>
                         </div>
                         <div>
@@ -146,7 +146,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/leptop.svg" alt="" /></div>
+                          <div><img src="/imgs/leptop.svg" alt="" /></div>
                           <div><p>Ноутбуки</p></div>
                         </div>
                         <div>
@@ -155,7 +155,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/wife.svg" alt="" /></div>
+                          <div><img src="/imgs/wife.svg" alt="" /></div>
                           <div><p>Сетевое оборудование</p></div>
                         </div>
                         <div>
@@ -164,7 +164,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/kamera.svg" alt="" /></div>
+                          <div><img src="/imgs/kamera.svg" alt="" /></div>
                           <div><p>Видеонаблюдение</p></div>
                         </div>
                         <div>
@@ -173,7 +173,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/tv.svg" alt="" /></div>
+                          <div><img src="/imgs/tv.svg" alt="" /></div>
                           <div><p>Компьютеры</p></div>
                         </div>
                         <div>
@@ -182,7 +182,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/print.svg" alt="" /></div>
+                          <div><img src="/imgs/print.svg" alt="" /></div>
                           <div><p>Техника для офиса</p></div>
                         </div>
                         <div>
@@ -191,7 +191,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/aip.svg" alt="" /></div>
+                          <div><img src="/imgs/aip.svg" alt="" /></div>
                           <div><p>Аксессуары</p></div>
                         </div>
                         <div>
@@ -200,7 +200,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/termiz.svg" alt="" /></div>
+                          <div><img src="/imgs/termiz.svg" alt="" /></div>
                           <div><p>Товары для дома</p></div>
                         </div>
                         <div>
@@ -209,7 +209,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/mais.svg" alt="" /></div>
+                          <div><img src="/imgs/mais.svg" alt="" /></div>
                           <div><p>Периферийные устройства</p></div>
                         </div>
                         <div>
@@ -218,7 +218,7 @@ function Navbar() {
                       </div>
                       <div className="ModalLeft">
                         <div className="ModalLeftBlock">
-                          <div><img src="/public/imgs/tel.svg" alt="" /></div>
+                          <div><img src="/imgs/tel.svg" alt="" /></div>
                           <div><p>IP Телефония</p></div>
                         </div>
                         <div>
@@ -243,7 +243,7 @@ function Navbar() {
                     </div>
                   </div>
                   <div className="categoriyaRight">
-                    <img onClick={() => setOpen(false)} src="/public/imgs/Group 460.png" alt="" />
+                    <img onClick={() => setOpen(false)} src="/imgs/Group 460.png" alt="" />
                   </div>
                 </div>
               </div>
