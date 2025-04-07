@@ -66,9 +66,6 @@ function Home() {
 
             </div></SwiperSlide>
           </Swiper>
-
-      
-
         </div>
         <main>
           <section className="section1">
@@ -87,11 +84,7 @@ function Home() {
               <ProductCard/>
               <ProductCard/>
               <ProductCard/>
-
-                 
-
               </div>
-
             </div>
           </section>
           <section className="section2">
