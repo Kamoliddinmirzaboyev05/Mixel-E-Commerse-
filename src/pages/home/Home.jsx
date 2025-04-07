@@ -95,25 +95,25 @@ function Home() {
                 <div className="box2-1">
                   <h4>Компьютеры</h4>
                   <div>
-                    <img src="/public/imgs/Computer 1.svg" alt="" />
+                    <img src="/imgs/Computer 1.svg" alt="" />
                   </div>
                 </div>
                 <div className="box2-1">
                   <h4>Компьютеры</h4>
                   <div>
-                    <img src="/public/imgs/Computer 1.svg" alt="" />
+                    <img src="/imgs/Computer 1.svg" alt="" />
                   </div>
                 </div>
                 <div className="box2-1">
                   <h4>Компьютеры</h4>
                   <div>
-                    <img src="/public/imgs/Computer 1.svg" alt="" />
+                    <img src="/imgs/Computer 1.svg" alt="" />
                   </div>
                 </div>
                 <div className="box2-1">
                   <h4>Компьютеры</h4>
                   <div>
-                    <img src="/public/imgs/Computer 1.svg" alt="" />
+                    <img src="/imgs/Computer 1.svg" alt="" />
                   </div>
                 </div>
               </div>
@@ -131,7 +131,7 @@ function Home() {
                   </h5>
                 </div>
                 <div className="Box3Img">
-                  <img src="/public/imgs/892 1.png" alt="" />
+                  <img src="/imgs/892 1.png" alt="" />
                 </div>
                 <div className="Box3-1">
                   <h2>1 250 900 Сум</h2>
@@ -170,7 +170,7 @@ function Home() {
               </div>
               <div className="Box5">
                 <div className="box5-3">
-                  <img src="/public/imgs/newHotRus 1.png" alt="" />
+                  <img src="/imgs/newHotRus 1.png" alt="" />
                 </div>
                 <div className="box5-2">
                 <ProductPanel/>
@@ -193,19 +193,19 @@ function Home() {
               </div>
               <div className="Box6">
                 <div className="box6-1">
-                  <img src="/public/imgs/Layer 48 copy 1.svg" alt="" />
+                  <img src="/imgs/Layer 48 copy 1.svg" alt="" />
                 </div>
                 <div className="box6-1">
-                  <img src="/public/imgs/Layer 48 copy 1.svg" alt="" />
+                  <img src="/imgs/Layer 48 copy 1.svg" alt="" />
                 </div>
                 <div className="box6-1">
-                  <img src="/public/imgs/Layer 48 copy 1.svg" alt="" />
+                  <img src="/imgs/Layer 48 copy 1.svg" alt="" />
                 </div>
                 <div className="box6-1">
-                  <img src="/public/imgs/Layer 48 copy 1.svg" alt="" />
+                  <img src="/imgs/Layer 48 copy 1.svg" alt="" />
                 </div>
                 <div className="box6-1">
-                  <img src="/public/imgs/Layer 48 copy 1.svg" alt="" />
+                  <img src="/imgs/Layer 48 copy 1.svg" alt="" />
                 </div>
               </div>
             </div>
