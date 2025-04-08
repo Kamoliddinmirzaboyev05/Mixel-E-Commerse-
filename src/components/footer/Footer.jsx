@@ -9,7 +9,7 @@ function Footer() {
                     <div className="FooterFeft">
                         <div className="logo">
                             <div>
-                                <img src="/public/imgs/logo.svg" alt="" />
+                                <img src="/imgs/logo.svg" alt="" />
                             </div>
                             <div>
                                 <h2>

@@ -71,7 +71,7 @@ function PhoneFiltr() {
                                 <div className='sent'>
                                     <div>
                                         <div>
-                                            <img src="/public/imgs/Bonus.svg" alt="" />
+                                            <img src="/imgs/Bonus.svg" alt="" />
                                         </div>
                                         <div>
                                             <p>
