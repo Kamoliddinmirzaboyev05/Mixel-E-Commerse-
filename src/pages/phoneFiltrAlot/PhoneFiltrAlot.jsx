@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./PhoneFiltr.css"
+// import { Link } from 'react-router-dom'
 import { HiOutlineChartBar } from 'react-icons/hi'
 import { CgMenuGridR } from 'react-icons/cg'
 import { GiHamburgerMenu } from 'react-icons/gi'
@@ -12,12 +12,13 @@ import ProductPanel from '../../components/productPanel/ProductPanel'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import { Link } from 'react-router-dom'
+import "./PhoneFiltrAlot.css"
 
 function valuetext(value) {
     return `${value}°C`;
 }
 
-function PhoneFiltr() {
+function PhoneFiltrAlot() {
     const [value, setValue] = useState([20, 70]);
 
     const handleChange = (event, newValue) => {
@@ -93,17 +94,17 @@ function PhoneFiltr() {
                                 </div>
                             </div>
                             <div className='smatfonTitleMenu'>
-                            <Link to={"/phoneFiltr"} className='activeFiltr'>
+                                <Link to={"/phoneFiltr"}>
                                     <div>
                                         <CgMenuGridR />
 
                                     </div>
                                 </Link>
-                                <Link to={"/phoneFiltrAlot"}>
-                                <div >
-                                    <GiHamburgerMenu />
+                                <Link to={"/phoneFiltrAlot"} className='activeAlot'>
+                                    <div >
+                                        <GiHamburgerMenu />
 
-                                </div>
+                                    </div>
                                 </Link>
                             </div>
                         </div>
@@ -146,7 +147,7 @@ function PhoneFiltr() {
                                     </div>
                                     <div className='zabrat'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox" className='custom-checkbox' />
                                         </div>
                                         <div>
                                             <p>
@@ -166,25 +167,25 @@ function PhoneFiltr() {
                                     </div>
                                     <div className='lg'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox" className='custom-checkbox' />
                                         </div>
                                         <p>LG (30)</p>
                                     </div>
                                     <div className='samsung'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox" className='custom-checkbox' />
                                         </div>
                                         <p>Samsung (30)</p>
                                     </div>
                                     <div className='artel'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox" className='custom-checkbox' />
                                         </div>
                                         <p>Artel (7)</p>
                                     </div>
                                     <div className='huawei'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox" className='custom-checkbox' />
                                         </div>
                                         <p>Huawei (30)</p>
                                     </div>
@@ -201,25 +202,25 @@ function PhoneFiltr() {
                                     </div>
                                     <div className='lg'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>1821 мА⋅ч</p>
                                     </div>
                                     <div className='samsung'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>3000 мА⋅ч</p>
                                     </div>
                                     <div className='artel'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>4500 мА⋅ч</p>
                                     </div>
                                     <div className='huawei'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>5000 мА⋅ч</p>
                                     </div>
@@ -236,25 +237,25 @@ function PhoneFiltr() {
                                     </div>
                                     <div className='lg'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>Вьетнам</p>
                                     </div>
                                     <div className='samsung'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>Китай</p>
                                     </div>
                                     <div className='artel'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>Artel </p>
                                     </div>
                                     <div className='huawei'>
                                         <div>
-                                            <input type="checkbox" />
+                                            <input type="checkbox"  className='custom-checkbox'/>
                                         </div>
                                         <p>Huawei</p>
                                     </div>
@@ -317,31 +318,47 @@ function PhoneFiltr() {
                                 </div>
                             </div>
                             <div className="smartfonRight">
-                                <div className="smartfonRightCards">
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
+                                <div className="PhoneFiltrAlotCards">
+                                    <div className='AloImg'>
+                                        <img src="/public/imgs/Rectangle 24.png" alt="" />
+                                    </div>
+                                    <div className="AlotTitle">
+                                        <h3>
+                                            I Mac i9 11 protsesor 8Gb SSD 256Gb
+                                        </h3>
+                                        <p>Brend: <span>Apple</span></p>
+                                        <p>Ishlab chiqaruvchi davlat: <span>AQSH</span></p>
+                                        <p>Turi: <span>An‘anaviy</span></p>
+                                    </div>
+                                    <div className="AlotBuy">
+                                        <h4>
+                                            15 000 000 сум/мес
+                                        </h4>
+                                        <p>
+                                            17 000 000 сум
+                                        </p>
+                                        <div >
+                                            <button>
+                                                <div>
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                                <div>
+                                                <p>
+                                                    В корзину
+                                                </p>
+                                                </div>
+                                            </button>
+                                        </div>
+                                        <div className='AlotBuyIcon'>
+                                            <div className='AlotBuyIconHeard'> 
+                                            <i class="fa-solid fa-heart"></i>
+                                            </div>
+                                            <div>
+                                                <i class="fa-solid fa-scale-balanced"></i>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
                                 <div className="smartfonRighBtn">
                                     <button className='smartfonRighButton'>
@@ -387,25 +404,6 @@ function PhoneFiltr() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="section1Title">
-                                    <h3>Товары которые так же могут быть интересны</h3>
-                                    <p>Посмотреть все →</p>
-                                </div>
-                                <div className="smartfonRightCards">
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                    <ProductPanel />
-                                </div>
-                                <div className="ToliqMalumot">
-                                    <h3>
-                                        Где купить надежный смартфон в Ташкенте?
-                                    </h3>
-                                    <p>
-                                        С каждым годом телефоны становятся всё умнее, незаменимей, функциональнее. Фактический на данном этапе у каждого узбекистанца есть как  минимум один смартфон.
-                                        Так что же такое "смартфон"? – это небольшое устройство, способное заменить компьютер, радио, видеокамеру, телевизор. Открывает доступ к интернету и связи в любой ситуации – дома, в транспорте, в спортзале, на улице. Раньше, чтобы купить электронику, мы мучительно ехали на рынки, блуждали по торговым рядам, тратили время, чтобы купить новую аппарат из линейки. Сейчас, всё на много проще. Зашли на сайт, почитали характеристики, отзывы, заказали. Все эти сложные технические характеристики в топовых смартфонах ничуть не уступают ноутбукам и стационарным ПК, но путают обычных потребителей. Возникает вопрос, где и как выбрать правильно качественный товар с адекватным ценником?
-                                    </p>
-                                </div>
 
                             </div>
                         </div>
@@ -417,4 +415,4 @@ function PhoneFiltr() {
     )
 }
 
-export default PhoneFiltr
+export default PhoneFiltrAlot

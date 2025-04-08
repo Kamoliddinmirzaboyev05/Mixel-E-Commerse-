@@ -9,6 +9,7 @@ import PhoneFiltr from './pages/phoneFiltr/PhoneFiltr'
 import ProductCard from './components/productCard/ProductCard'
 import ProductPanel from './components/productPanel/ProductPanel'
 import ProductBox from './components/productBox/ProductBox'
+import PhoneFiltrAlot from './pages/phoneFiltrAlot/PhoneFiltrAlot'
 function App() {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ function App() {
         <Route path='/productPanel' element={<ProductPanel />} />
         <Route path='/productBox' element={<ProductBox />} />
         <Route path='/phoneFiltr' element={<PhoneFiltr />} />
+        <Route path='/phoneFiltrAlot' element={<PhoneFiltrAlot/>}/>
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
       <Footer />
