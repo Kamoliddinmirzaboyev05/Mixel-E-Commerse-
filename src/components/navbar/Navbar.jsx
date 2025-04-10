@@ -80,20 +80,22 @@ function Navbar() {
                   <p>Войти</p>
                 </div>
               </Link>
+              <Link to={"/comparison"}>
               <div>
-                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-scale-balanced"></i>
                 <br />
                 <p>Сравнение</p>
               </div>
+              </Link>
               <Link to={"/liked"}>
                 <div>
-                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-regular fa-heart"></i>
                   <br />
                   <p>Избранное</p>
                 </div>
               </Link>
               <div>
-                <i class="fa-regular fa-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
                 <br />
                 <p>Корзина</p>
               </div>
@@ -123,8 +125,8 @@ function Navbar() {
               <p>Комплектующие</p>
               <p>Сетевое оборудование</p>
               <p>Оргтехника</p>
-              
-             
+
+
             </div>
           </div>
         </div>

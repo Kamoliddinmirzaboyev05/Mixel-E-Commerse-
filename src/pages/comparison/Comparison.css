@@ -1,0 +1,11 @@
+.comparison{
+    padding-top: 200px;
+}
+.comparisonCards .productsBlock{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}

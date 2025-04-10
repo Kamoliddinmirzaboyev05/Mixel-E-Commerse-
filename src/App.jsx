@@ -10,6 +10,9 @@ import ProductCard from './components/productCard/ProductCard'
 import ProductPanel from './components/productPanel/ProductPanel'
 import ProductBox from './components/productBox/ProductBox'
 import PhoneFiltrAlot from './pages/phoneFiltrAlot/PhoneFiltrAlot'
+import Product from './pages/product/Product'
+import Liked from './pages/liked/Liked'
+import Comparison from './pages/comparison/Comparison'
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +24,9 @@ function App() {
         <Route path='/productBox' element={<ProductBox />} />
         <Route path='/phoneFiltr' element={<PhoneFiltr />} />
         <Route path='/phoneFiltrAlot' element={<PhoneFiltrAlot/>}/>
+        <Route path='/product' element={<Product />} />
+        <Route path='/liked' element={<Liked/>} />
+        <Route path='/comparison' element={<Comparison/>} />
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
       <Footer />
