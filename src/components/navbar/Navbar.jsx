@@ -73,7 +73,7 @@ function Navbar() {
               </div>
             </div>
             <div className="NavIcon">
-              <Link to={"/dashboard"}>
+              <Link to={"/login"}>
                 <div>
                   <i class="fa-regular fa-user"></i>
                   <br />
