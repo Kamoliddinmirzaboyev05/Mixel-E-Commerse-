@@ -13,6 +13,7 @@ import PhoneFiltrAlot from './pages/phoneFiltrAlot/PhoneFiltrAlot'
 import Product from './pages/product/Product'
 import Liked from './pages/liked/Liked'
 import Comparison from './pages/comparison/Comparison'
+import Login from './pages/login/Login'
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path='/liked' element={<Liked/>} />
         <Route path='/comparison' element={<Comparison/>} />
         <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/login' element={<Login />} />
       </Routes>
       <Footer />
     </BrowserRouter>

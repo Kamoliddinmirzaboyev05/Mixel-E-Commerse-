@@ -1,0 +1,61 @@
+.loginPage {
+  padding-top: 240px;
+  padding-bottom: 60px;
+}
+.formBack {
+  position: relative;
+  width: 550px;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0 0 10px black;
+  border-radius: 12px;
+  height: 500px;
+}
+.loginPage .signUp {
+  width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+.loginPage form {
+  display: flex;
+  padding-top: 30px;
+  flex-direction: column;
+  gap: 15px;
+}
+form input,
+.loginPage .signUp form button {
+  padding: 15px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+.loginPage form button {
+  border: none;
+  background-color: #ed3729;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+.login {
+  position: absolute;
+  bottom: -380px;
+  width: 550px;
+  padding: 30px;
+  text-align: center;
+  background-color: #ed3729;
+  padding-top: 20px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  color: white;
+}
+.login.open {
+  bottom: -10px;
+}
+.login button {
+  background-color: white !important;
+  padding: 15px 0;
+  color: #ED3729 !important;
+}
