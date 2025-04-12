@@ -1,5 +1,6 @@
 .comparison {
     padding-top: 200px;
+    padding-bottom: 80px;
 }
 
 .comparisonCards .productsBlock {
@@ -76,4 +77,19 @@
     color: #BDBDBD;
     padding-top: 2px;
     cursor: pointer;
+}
+.CharacteristicsCards{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color: rgba(144, 144, 144, 1);
+    padding: 25px 0px;
+    border-bottom: 1px solid rgba(242, 242, 242, 1);
+}
+.CharacteristicsCard{
+    width: 280px;
+}
+.CharacteristicsCard p{
+    font-size: 16px;
+    font-weight: 400;
 }

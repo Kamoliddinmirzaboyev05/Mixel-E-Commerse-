@@ -84,6 +84,104 @@ function Comparison() {
 
                         </div>
                     </div>
+                    <div className="Characteristics">
+                        <h3>Характеристики товара</h3>
+                        <div className="CharacteristicsCards">
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Герцовка
+                                </p>
+                            </div>
+                        </div>
+                        <div className="CharacteristicsCards">
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Герцовка
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    IP67
+                                </p>
+                            </div>
+                        </div>
+                        <div className="CharacteristicsCards">
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Версия ОС
+                                </p>
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                        </div>
+                        <div className="CharacteristicsCards">
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Версия ОС
+                                </p>
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                        </div>
+                        <div className="CharacteristicsCards">
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Версия ОС
+                                </p>
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                            <div className="CharacteristicsCard">
+                                <p>
+                                    Android 11
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </>

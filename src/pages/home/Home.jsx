@@ -14,7 +14,7 @@ import ProductCard from "../../components/productCard/ProductCard";
 import ProductBox from "../../components/productBox/ProductBox";
 import ProductPanel from "../../components/productPanel/ProductPanel";
 
-function Home() {
+function Home({ products, getData }) {
   return (
     <div className="home">
       <div>
@@ -73,15 +73,19 @@ function Home() {
                 <p>Посмотреть все →</p>
               </div>
               <div className="Box1">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {
+                  products?.results?.map((item) => {
+                    return (
+                      <ProductCard
+                        key={item.id}
+                        item={item}
+                        getData={getData}
+                      />
+                    );
+                  })
+
+                }
+
               </div>
             </div>
           </section>

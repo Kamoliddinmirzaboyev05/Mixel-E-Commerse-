@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Product.css"
 import { Link } from 'react-router-dom'
 import ProductPanel from '../../components/productPanel/ProductPanel'
 function Product() {
+
     return (
         <>
             <div className="product">

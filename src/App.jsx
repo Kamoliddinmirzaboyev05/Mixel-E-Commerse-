@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./App.css"
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Home from './pages/home/Home'
@@ -15,19 +15,38 @@ import Liked from './pages/liked/Liked'
 import Comparison from './pages/comparison/Comparison'
 import Login from './pages/login/Login'
 function App() {
+  const [products, setProducts] = useState(null)
+
+  const getData = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow"
+    };
+
+    fetch("https://abzzvx.pythonanywhere.com/products/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result)
+        setProducts(result)
+      })
+      .catch((error) => console.error(error));
+  }
+  useEffect(() => {
+    getData()
+  }, [])
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home products={products} getData={getData}/>} />
         <Route path='/productCard' element={<ProductCard />} />
         <Route path='/productPanel' element={<ProductPanel />} />
         <Route path='/productBox' element={<ProductBox />} />
         <Route path='/phoneFiltr' element={<PhoneFiltr />} />
-        <Route path='/phoneFiltrAlot' element={<PhoneFiltrAlot/>}/>
+        <Route path='/phoneFiltrAlot' element={<PhoneFiltrAlot />} />
         <Route path='/product' element={<Product />} />
-        <Route path='/liked' element={<Liked/>} />
-        <Route path='/comparison' element={<Comparison/>} />
+        <Route path='/liked' element={<Liked />} />
+        <Route path='/comparison' element={<Comparison />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/login' element={<Login />} />
       </Routes>
