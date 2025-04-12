@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import React, { useRef, useState } from 'react';
 import "./Home.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +15,25 @@ import ProductBox from "../../components/productBox/ProductBox";
 import ProductPanel from "../../components/productPanel/ProductPanel";
 
 function Home() {
+  const [products, setProducts] = useState(null);
+  // getProducts function
+  const getProducts = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("https://abzzvx.pythonanywhere.com/products/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setProducts(result);
+        console.log(result);
+      })
+      .catch((error) => console.error(error));
+  };
+  useEffect(() => {
+    getProducts();
+  }, []);
   return (
     <div className="home">
       <div>
@@ -73,15 +92,9 @@ function Home() {
                 <p>Посмотреть все →</p>
               </div>
               <div className="Box1">
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
-                <ProductCard />
+                {products?.results?.map((product) => {
+                  return <ProductCard product={product} />;
+                })}
               </div>
             </div>
           </section>

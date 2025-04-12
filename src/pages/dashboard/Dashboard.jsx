@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import Switch from "@mui/material/Switch";
 import { pink } from "@mui/material/colors";
@@ -9,6 +9,57 @@ const label = {
 };
 
 function Dashboard({ userData, getUser }) {
+  console.log(userData);
+  const [firstName, setFirstName] = useState(null);
+  const [lastName, setLastName] = useState(null);
+  const [userName, setUserName] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [cardNumber, setCardNumber] = useState(null);
+  const [phone_number, setPhoneNumber] = useState(null);
+  useEffect(() => {
+    setUserName(userData?.username);
+    setFirstName(userData?.first_name);
+    setLastName(userData?.last_name);
+    setCardNumber(userData?.card_number);
+    setPassword(userData?.password);
+    setPhoneNumber(userData?.phone_number);
+  }, [userData]);
+
+  // updateUserData function
+  const updateUserData = () => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+    myHeaders.append(
+      "Authorization",
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2OTY4ODM2LCJpYXQiOjE3NDQzNzY4MzYsImp0aSI6IjM3ZDg1OWM0MDI1YzQ0OTI4YTBiZmJjYzI1OTIzMWIwIiwidXNlcl9pZCI6Nn0.EeshoEXkKF59HLiBCpb_AsIiC2_mlwa6AIGceUX8464"
+    );
+
+    const raw = JSON.stringify({
+      username: userName,
+      first_name: firstName,
+      last_name: lastName,
+      password,
+      phone_number,
+      card_number: cardNumber,
+      isadmin: false,
+    });
+
+    const requestOptions = {
+      method: "PATCH",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("https://abzzvx.pythonanywhere.com/users/me", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        
+        console.log(raw);
+      })
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="dashboardPage">
       <div className="container">
@@ -70,26 +121,60 @@ function Dashboard({ userData, getUser }) {
             </div>
           </div>
           <div className="rightForm">
-            <form action="#">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                updateUserData();
+              }}
+              action="#"
+            >
               <h2 className="formTitle">Edit Your Profile</h2>
               <div className="row">
                 <div className="rowItem">
                   <label>First Name</label>
-                  <input required type="text" placeholder="Md" />
+                  <input
+                    onChange={(e) => {
+                      setFirstName(e.target.value);
+                    }}
+                    value={firstName}
+                    required
+                    type="text"
+                    placeholder="Md"
+                  />
                 </div>
                 <div className="rowItem">
                   <label>Last Name</label>
-                  <input required type="text" placeholder="Rimel" />
+                  <input
+                    onChange={(e) => {
+                      setLastName(e.target.value);
+                    }}
+                    value={lastName}
+                    required
+                    type="text"
+                    placeholder="Rimel"
+                  />
                 </div>
               </div>
               <div className="row">
                 <div className="rowItem">
                   <label>Username</label>
-                  <input required type="text" placeholder="Username" />
+                  <input
+                    onChange={(e) => {
+                      setUserName(e.target.value);
+                    }}
+                    value={userName}
+                    required
+                    type="text"
+                    placeholder="Username"
+                  />
                 </div>
                 <div className="rowItem">
                   <label>Card Number</label>
                   <input
+                    onChange={(e) => {
+                      setCardNumber(e.target.value);
+                    }}
+                    value={cardNumber}
                     required
                     type="text"
                     placeholder="0000 0000 0000 0000"
@@ -98,11 +183,26 @@ function Dashboard({ userData, getUser }) {
               </div>
               <div className="rowItem">
                 <label>Phone</label>
-                <input required type="text" placeholder="+998 (12) 345 67 89" />
+                <input
+                  onChange={(e) => {
+                    setPhoneNumber(e.target.value);
+                  }}
+                  value={phone_number}
+                  required
+                  type="text"
+                  placeholder="+998 (12) 345 67 89"
+                />
               </div>
               <div className="passwordChanges">
                 <h2>Password Changes</h2>
-                <input type="password" placeholder="New Password" />
+                <input
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
+                  value={password}
+                  type="password"
+                  placeholder="New Password"
+                />
                 <input type="password" placeholder="Confirim New Password" />
                 <div className="formBtns">
                   <button className="cancelBtn">Cancel</button>

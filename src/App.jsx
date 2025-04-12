@@ -47,6 +47,7 @@ function App() {
       getUser();
     }, []);
   }
+
   return (
     <BrowserRouter>
       <ToastContainer

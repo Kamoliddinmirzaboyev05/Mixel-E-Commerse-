@@ -25,7 +25,7 @@ function SignUp() {
       username,
       email,
       password,
-      isadmin: false,
+      isadmin: true,
     });
 
     const requestOptions = {
@@ -44,7 +44,7 @@ function SignUp() {
         } else if (password != confirmPassword) {
           toast.info("Parolni tekshiring");
         } else {
-          toast.error(result.email[0]);
+          toast.error("result.email");
         }
       })
       .catch((error) => console.error(error));
