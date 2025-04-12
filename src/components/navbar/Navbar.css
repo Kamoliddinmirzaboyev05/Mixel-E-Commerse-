@@ -1,221 +1,218 @@
 .navTop .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0px;
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0px;
 }
 
 .navTop {
-    background-color: #ED3729;
-    color: white;
+  background-color: #ed3729;
+  color: white;
 }
 
 .NavTopLeft {
-    display: flex;
-    gap: 50px;
-    align-items: center;
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
 
 .NavTopLeft div {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .NavbarTopRight {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .formControl section {
-    border: none;
-    outline: none;
-    border-radius: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
 }
 
 /* ============================================= */
 nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .NavSearch {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    border: 2px solid #ED3729;
-    border-radius: 8px;
-    padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 2px solid #ed3729;
+  border-radius: 8px;
+  padding-left: 10px;
 }
 
 .NavSearch button {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 15px 20px;
-    border-radius: 0px 5px 5px 0px;
-    border: #ED3729;
-    outline: none;
-    background-color: #ED3729;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 20px;
+  border-radius: 0px 5px 5px 0px;
+  border: #ed3729;
+  outline: none;
+  background-color: #ed3729;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .mikrafon {
-    color: #BDBDBD;
-    cursor: pointer;
+  color: #bdbdbd;
+  cursor: pointer;
 }
 
 .NavSearch input {
-    border: none;
-    outline: none;
-    width: 280px;
+  border: none;
+  outline: none;
+  width: 280px;
 }
 
 .NavIcon {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    gap: 36px;
-    font-size: 14px;
-    font-weight: 400;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 26px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .NavIcon i {
-    font-size: 18px;
-    padding-bottom: 5px;
+  font-size: 18px;
+  padding-bottom: 5px;
 }
 
 /* ===================================================== */
 .MenuCategori button {
-    padding: 10px 79px;
-    background-color: #ED3729;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  padding: 10px 79px;
+  background-color: #ed3729;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-.MenuCategori i{
-    color: white;
+.MenuCategori i {
+  color: white;
 }
 
 .navCategori .container {
-    padding-bottom: 25px;
+  padding-bottom: 25px;
 }
 
 .CategoryTovar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .CategoryTovar p {
-    font-size: 15px;
-    font-weight: 400;
-    cursor: pointer;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 .navCategori .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .OneNav {
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    top: 0px;
-    background-color: white;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0px;
+  background-color: white;
 }
 
 /* ============================================== */
 .categoriyaModal {
-    background-color: white;
-    position: fixed;
-    width: 100%;
+  background-color: white;
+  position: fixed;
+  width: 100%;
 }
 
 .ModalLeft {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 280px;
-    margin-bottom: 15px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.25s ease;
 }
 
 .ModalLeft:hover {
-    background-color: #F2F2F2;
-    cursor: pointer;
+  background-color: #f2f2f2;
+  cursor: pointer;
 }
 
 .ModalLeftBlock {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
-.categoriyaLeft{
-    display: flex;
-    gap: 15px;
+.categoriyaLeft {
+  display: flex;
+  gap: 15px;
 }
-.categoriyaModal2{
-    padding: 5px 10px;
+.categoriyaModal2 {
+  padding: 5px 10px;
 }
-.categoriyaModal2 h3{
-    font-size: 24px;
-    font-weight: 400;
-    padding-bottom: 25px;
+.categoriyaModal2 h3 {
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 25px;
 }
-.categoriyaModal .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.categoriyaModal .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.categoriyaRight  img{
-    width: 500px;
-    cursor: pointer;
+.categoriyaRight img {
+  width: 500px;
+  cursor: pointer;
 }
-.categoriyaModal{
-    position: fixed;
-    backdrop-filter: blur(8px);
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-
+.categoriyaModal {
+  position: fixed;
+  backdrop-filter: blur(8px);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
 }
-.categoriyaModal .ModalContainer{
-    background-color: white;
+.categoriyaModal .ModalContainer {
+  background-color: white;
 }
-.categoriyaModal2 p{
-    margin-bottom: 20px;
-    font-size:16px;
-    font-weight: 400;
-    cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 5px;
-    transition: all .25s ease;
+.categoriyaModal2 p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 8px 10px;
+  border-radius: 5px;
+  transition: all 0.25s ease;
 }
 .categoriyaModal2 p:hover {
-    background-color: #F2F2F2;
-    cursor: pointer;
+  background-color: #f2f2f2;
+  cursor: pointer;
 }

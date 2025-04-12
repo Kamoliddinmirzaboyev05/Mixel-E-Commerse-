@@ -73,19 +73,19 @@ function Navbar() {
               </div>
             </div>
             <div className="NavIcon">
-              <Link to={"/login"}>
+              <Link to={"/signup"}>
                 <div>
-                  <i class="fa-regular fa-user"></i>
+                  <i class="fa-solid fa-right-to-bracket"></i>
                   <br />
                   <p>Войти</p>
                 </div>
               </Link>
               <Link to={"/comparison"}>
-              <div>
-                <i class="fa-solid fa-scale-balanced"></i>
-                <br />
-                <p>Сравнение</p>
-              </div>
+                <div>
+                  <i class="fa-solid fa-scale-balanced"></i>
+                  <br />
+                  <p>Сравнение</p>
+                </div>
               </Link>
               <Link to={"/liked"}>
                 <div>
@@ -99,8 +99,14 @@ function Navbar() {
                 <br />
                 <p>Корзина</p>
               </div>
+              <Link to={"/dashboard"}>
+                <div>
+                  <i class="fa-solid fa-user"></i>
+                  <br />
+                  <p>Профиль</p>
+                </div>
+              </Link>
             </div>
-
           </div>
         </nav>
         <div className="navCategori">
@@ -110,7 +116,7 @@ function Navbar() {
                 <div>
                   <i class="fa-solid fa-list"></i>
                 </div>
-                <div >
+                <div>
                   <p>Категории</p>
                 </div>
               </button>
@@ -125,137 +131,176 @@ function Navbar() {
               <p>Комплектующие</p>
               <p>Сетевое оборудование</p>
               <p>Оргтехника</p>
-
-
             </div>
           </div>
         </div>
-        {
-          open && (
-            <div className="categoriyaModal" >
-              <div className="ModalContainer">
-                <div className="container">
-                  <div className="categoriyaLeft">
-                    <div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div ><  img src="/imgs/phone.svg" alt="" /></div>
-                          <div><p>Телефоны, планшеты</p></div>
+        {open && (
+          <div className="categoriyaModal">
+            <div className="ModalContainer">
+              <div className="container">
+                <div className="categoriyaLeft">
+                  <div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/phone.svg" alt="" />
                         </div>
                         <div>
-                          <i class="fa-solid fa-chevron-right"></i>
+                          <p>Телефоны, планшеты</p>
                         </div>
                       </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/leptop.svg" alt="" /></div>
-                          <div><p>Ноутбуки</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/wife.svg" alt="" /></div>
-                          <div><p>Сетевое оборудование</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/kamera.svg" alt="" /></div>
-                          <div><p>Видеонаблюдение</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/tv.svg" alt="" /></div>
-                          <div><p>Компьютеры</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/print.svg" alt="" /></div>
-                          <div><p>Техника для офиса</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/aip.svg" alt="" /></div>
-                          <div><p>Аксессуары</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/termiz.svg" alt="" /></div>
-                          <div><p>Товары для дома</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/mais.svg" alt="" /></div>
-                          <div><p>Периферийные устройства</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                      </div>
-                      <div className="ModalLeft">
-                        <div className="ModalLeftBlock">
-                          <div><img src="/imgs/tel.svg" alt="" /></div>
-                          <div><p>IP Телефония</p></div>
-                        </div>
-                        <div>
-                          <i class="fa-solid fa-chevron-right"></i>
-                        </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
                       </div>
                     </div>
-                    <div className="categoriyaModal2">
-                      <h3>
-                        Сетевое <br /> оборудование
-                      </h3>
-                      <p>Коммутаторы</p>
-                      <p>Точки доступа Wi-Fi</p>
-                      <p>Медиаконверторы</p>
-                      <p>ADSL роутеры</p>
-                      <p>Сетевые адаптеры</p>
-                      <p>Wi-Fi роутеры и маршрутизаторы</p>
-                      <p>Инжекторы</p>
-                      <p>Повторители сигнала</p>
-                      <p>Прочее сетевое оборудование</p>
-                      <p>Сетевой кабель (Ethernet)</p>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/leptop.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Ноутбуки</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/wife.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Сетевое оборудование</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/kamera.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Видеонаблюдение</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/tv.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Компьютеры</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/print.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Техника для офиса</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/aip.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Аксессуары</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/termiz.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Товары для дома</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/mais.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>Периферийные устройства</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
+                    </div>
+                    <div className="ModalLeft">
+                      <div className="ModalLeftBlock">
+                        <div>
+                          <img src="/imgs/tel.svg" alt="" />
+                        </div>
+                        <div>
+                          <p>IP Телефония</p>
+                        </div>
+                      </div>
+                      <div>
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </div>
                     </div>
                   </div>
-                  <div className="categoriyaRight">
-                    <img onClick={() => setOpen(false)} src="/imgs/Group 460.png" alt="" />
+                  <div className="categoriyaModal2">
+                    <h3>
+                      Сетевое <br /> оборудование
+                    </h3>
+                    <p>Коммутаторы</p>
+                    <p>Точки доступа Wi-Fi</p>
+                    <p>Медиаконверторы</p>
+                    <p>ADSL роутеры</p>
+                    <p>Сетевые адаптеры</p>
+                    <p>Wi-Fi роутеры и маршрутизаторы</p>
+                    <p>Инжекторы</p>
+                    <p>Повторители сигнала</p>
+                    <p>Прочее сетевое оборудование</p>
+                    <p>Сетевой кабель (Ethernet)</p>
                   </div>
+                </div>
+                <div className="categoriyaRight">
+                  <img
+                    onClick={() => setOpen(false)}
+                    src="/imgs/Group 460.png"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
-          )
-        }
-      </div >
-
+          </div>
+        )}
+      </div>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
