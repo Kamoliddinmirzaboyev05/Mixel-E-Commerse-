@@ -9,7 +9,6 @@ const label = {
 };
 
 function Dashboard({ userData, getUser }) {
-  console.log(userData);
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
   const [userName, setUserName] = useState(null);

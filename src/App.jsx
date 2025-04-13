@@ -18,7 +18,7 @@ import SignUp from "./pages/signup/SignUp";
 import { Bounce, ToastContainer } from "react-toastify";
 function App() {
   const [userData, setUserData] = useState(null);
-  const [products, setProducts] = useState(null)
+  const [products, setProducts] = useState(null);
   // getData Function
   const getData = () => {
     const requestOptions = {
@@ -35,29 +35,31 @@ function App() {
       .catch((error) => console.error(error));
   };
   // getUser Function
-  const getUser = () => {
-    const myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      `Bearer ${localStorage.getItem("mixelToken")}`
-    );
+  // const getUser = () => {
+  //   const myHeaders = new Headers();
+  //   myHeaders.append(
+  //     "Authorization",
+  //     `Bearer ${localStorage.getItem("mixelToken")}`
+  //   );
 
-    const requestOptions = {
-      method: "GET",
-      headers: myHeaders,
-      redirect: "follow",
-    };
+  //   const requestOptions = {
+  //     method: "GET",
+  //     headers: myHeaders,
+  //     redirect: "follow",
+  //   };
 
-    fetch("https://abzzvx.pythonanywhere.com/users/me", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        setUserData(result);
-      })
-      .catch((error) => console.error(error));
-  };
+  //   fetch("https://abzzvx.pythonanywhere.com/users/me", requestOptions)
+  //     .then((response) => response.json())
+  //     .then((result) => {
+  //       setUserData(result);
+  //     })
+  //     .catch((error) => console.error(error));
+  // };
   if (localStorage.getItem("mixelToken")) {
     useEffect(() => {
-      getUser();
+      // if (localStorage.getItem("mixelToken")) {
+      //   getUser();
+      // }
       getData();
     }, []);
   }
@@ -93,7 +95,7 @@ function App() {
         <Route path="/comparison" element={<Comparison />} />
         <Route
           path="/dashboard"
-          element={<Dashboard userData={userData} getUser={getUser} />}
+          element={<Dashboard userData={userData}/>}
         />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

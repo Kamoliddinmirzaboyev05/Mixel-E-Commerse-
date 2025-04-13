@@ -2,10 +2,14 @@ import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 function ProductCard({ item, getData }) {
+  console.log(item);
+
   return (
     <div className="box1-1">
       <Link to={`/product/${item.id}`}>
-        <img src="/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png" alt="" />
+        <div className="cardImg">
+          <img src={item?.images[0]?.image} alt="" />
+        </div>
         <div className="chegirma">
           <div>
             <p>-3%</p>
@@ -17,7 +21,7 @@ function ProductCard({ item, getData }) {
           </div>
           <div>
             <p>
-              <span>moony/</span>${item.monthly_price}
+              <span>месячный/</span>${item.monthly_price}
             </p>
           </div>
         </div>
