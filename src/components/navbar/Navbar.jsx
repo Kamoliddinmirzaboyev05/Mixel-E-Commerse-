@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -6,40 +6,16 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Link } from "react-router-dom";
+import Hamburger from "hamburger-react";
 function Navbar() {
-  const [age, setAge] = useState("");
-  const [open, setOpen] = useState(false);
 
-  const handleChange = (event) => {
-    setAge(event.target.value);
-  };
+  const [isOpen, setOpen] = useState(false);
+  const [isOpenModal, setOpenModal] = useState(false);
 
   return (
     <>
       <div className="OneNav">
-        <div className="navTop">
-          <div className="container">
-            <div className="NavTopLeft">
-              <div>
-                <p>Ташкент</p>
-              </div>
-              <div>
-                <p>Наши магазины</p>
-                <p>B2B продажи</p>
-                <p>Покупка в рассрочку</p>
-                <p>Способы оплаты</p>
-                <p>Гарантия на товары</p>
-              </div>
-            </div>
-            <div className="NavbarTopRight">
-              <div>
-                <p>+998 95 123 55 88</p>
-              </div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <nav>
+        <nav className={`navbar`}>
           <div className="container">
             <Link to={"/"}>
               <div className="logo">
@@ -53,14 +29,9 @@ function Navbar() {
             </Link>
             <div className="NavSearch">
               <div>
-                <p>Все категории</p>
-              </div>
-              <div>
                 <input type="text" placeholder="Телефоны и бытовая" />
               </div>
-              <div className="mikrafon">
-                <i class="fa-solid fa-microphone"></i>
-              </div>
+           
               <div>
                 <button>
                   <div>
@@ -109,12 +80,16 @@ function Navbar() {
             </div>
           </div>
         </nav>
-        <div className="navCategori">
+        <div className={`navCategori`}>
           <div className="container">
             <div className="MenuCategori">
-              <button onClick={() => setOpen(true)}>
+              <button
+                onClick={() => {
+                  setOpenModal(!isOpenModal);
+                }}
+              >
                 <div>
-                  <i class="fa-solid fa-list"></i>
+                  <Hamburger size={15} toggled={isOpen} toggle={setOpen} />
                 </div>
                 <div>
                   <p>Категории</p>
@@ -134,7 +109,7 @@ function Navbar() {
             </div>
           </div>
         </div>
-        {open && (
+        {isOpenModal && (
           <div className="categoriyaModal">
             <div className="ModalContainer">
               <div className="container">

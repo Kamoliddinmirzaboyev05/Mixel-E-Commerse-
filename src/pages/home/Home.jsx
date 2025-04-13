@@ -75,7 +75,7 @@ function Home({ products, getData }) {
               <div className="Box1">
                 {products?.results?.map((item) => {
                   return (
-                    <ProductCard key={item.id} item={item} getData={getData} />
+                    <ProductBox key={item.id} item={item} getData={getData} />
                   );
                 })}
               </div>

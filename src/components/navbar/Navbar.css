@@ -8,6 +8,7 @@
 .navTop {
   background-color: #ed3729;
   color: white;
+  transition: all 5s ease;
 }
 
 .NavTopLeft {
@@ -35,6 +36,18 @@
 }
 
 /* ============================================= */
+.navbar {
+  background-color: white;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
 nav .container {
   display: flex;
   justify-content: space-between;
@@ -89,7 +102,7 @@ button {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 26px;
+  gap: 36px;
   font-size: 14px;
   font-weight: 400;
 }
@@ -101,7 +114,7 @@ button {
 
 /* ===================================================== */
 .MenuCategori button {
-  padding: 10px 79px;
+  padding: 0px 60px;
   background-color: #ed3729;
   border: none;
   color: white;
@@ -113,11 +126,6 @@ button {
 .MenuCategori i {
   color: white;
 }
-
-.navCategori .container {
-  padding-bottom: 25px;
-}
-
 .CategoryTovar {
   display: flex;
   align-items: center;
@@ -135,9 +143,18 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-
-.OneNav {
+.navCategori {
+  background-color: white;
+  padding-bottom: 10px;
+}
+.navCategori {
   position: fixed;
+  z-index: 1000;
+  top: 100px;
+  width: 100%;
+  background-color: white !important;
+}
+.OneNav {
   z-index: 999;
   width: 100%;
   top: 0px;
@@ -149,6 +166,8 @@ button {
   background-color: white;
   position: fixed;
   width: 100%;
+  z-index: 999;
+  top: 156px;
 }
 
 .ModalLeft {
@@ -166,7 +185,9 @@ button {
   background-color: #f2f2f2;
   cursor: pointer;
 }
-
+.hamburger-react {
+  height: 48px !important;
+}
 .ModalLeftBlock {
   display: flex;
   align-items: center;

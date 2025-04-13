@@ -90,7 +90,7 @@ function App() {
         <Route path="/productBox" element={<ProductBox />} />
         <Route path="/phoneFiltr" element={<PhoneFiltr />} />
         <Route path="/phoneFiltrAlot" element={<PhoneFiltrAlot />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product/:id" element={<Product />} />
         <Route path="/liked" element={<Liked />} />
         <Route path="/comparison" element={<Comparison />} />
         <Route

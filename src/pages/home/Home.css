@@ -5,9 +5,8 @@
   padding: 160px 0px;
 }
 .home {
-  padding-top: 165px;
+  padding-top: 130px;
 }
-
 .section1Title {
   display: flex;
   justify-content: space-between;
@@ -266,14 +265,11 @@
 .section4 {
   padding-bottom: 80px;
 }
-
 .box4-1 {
-  width: 220px;
+  width: 240px;
   text-align: center;
   border-radius: 5px;
   border: 1px solid rgba(242, 242, 242, 1);
-  /* margin-bottom: 30px; */
-  transition: all 0.5s ease;
 }
 .box4-1:hover {
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
@@ -289,7 +285,6 @@
 }
 
 .Box4Narx p {
-  /* border-right: 2px solid rgba(242, 242, 242, 1); */
   font-size: 12px;
   font-weight: 400;
   color: rgba(144, 144, 144, 1);
@@ -353,7 +348,6 @@
 .box5-3 img {
   width: 100%;
   height: 100%;
-  /* width: 360px; */
 }
 
 .box5-2 {
