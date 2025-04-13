@@ -18,9 +18,22 @@ import SignUp from "./pages/signup/SignUp";
 import { Bounce, ToastContainer } from "react-toastify";
 function App() {
   const [userData, setUserData] = useState(null);
+  const [products, setProducts] = useState(null)
   // getData Function
-  const getData = () => {};
+  const getData = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
 
+    fetch("https://abzzvx.pythonanywhere.com/products/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
+        setProducts(result);
+      })
+      .catch((error) => console.error(error));
+  };
   // getUser Function
   const getUser = () => {
     const myHeaders = new Headers();
@@ -45,6 +58,7 @@ function App() {
   if (localStorage.getItem("mixelToken")) {
     useEffect(() => {
       getUser();
+      getData();
     }, []);
   }
 
@@ -65,7 +79,10 @@ function App() {
       />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={<Home products={products} getData={getData} />}
+        />
         <Route path="/productCard" element={<ProductCard />} />
         <Route path="/productPanel" element={<ProductPanel />} />
         <Route path="/productBox" element={<ProductBox />} />

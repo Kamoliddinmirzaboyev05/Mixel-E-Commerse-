@@ -1,10 +1,10 @@
 import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
-function ProductCard({ product }) {
+function ProductCard({ item, getData }) {
   return (
     <div className="box1-1">
-      <Link to={"/product"}>
+      <Link to={`/product/${item.id}`}>
         <img src="/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png" alt="" />
         <div className="chegirma">
           <div>
@@ -13,15 +13,15 @@ function ProductCard({ product }) {
         </div>
         <div className="Box1Narx">
           <div>
-            <p>1 373 000 сум</p>
+            <h3>${item.price}</h3>
           </div>
           <div>
-            <h3>$ {product?.price}</h3>
+            <p>
+              <span>moony/</span>${item.monthly_price}
+            </p>
           </div>
         </div>
-        <h3 className="Title">
-         {product?.name}
-        </h3>
+        <h3 className="Title">{item.name}</h3>
         <p className="Title2">Предложение заканчивается через:</p>
         <div className="Box1Data">
           <div className="ДНЕЙ">
