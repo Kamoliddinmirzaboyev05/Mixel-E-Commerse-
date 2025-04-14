@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import ProductCard from "../../components/productCard/ProductCard";
+// import ProductCard from "../../components/productCard/ProductCard";
 import ProductBox from "../../components/productBox/ProductBox";
 import ProductPanel from "../../components/productPanel/ProductPanel";
 

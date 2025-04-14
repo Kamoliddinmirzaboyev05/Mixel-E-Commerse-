@@ -6,7 +6,7 @@ import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import Dashboard from "./pages/dashboard/Dashboard";
 import PhoneFiltr from "./pages/phoneFiltr/PhoneFiltr";
-import ProductCard from "./components/productCard/ProductCard";
+// import ProductCard from "./components/productCard/ProductCard";
 import ProductPanel from "./components/productPanel/ProductPanel";
 import ProductBox from "./components/productBox/ProductBox";
 import PhoneFiltrAlot from "./pages/phoneFiltrAlot/PhoneFiltrAlot";
@@ -85,7 +85,6 @@ function App() {
           path="/"
           element={<Home products={products} getData={getData} />}
         />
-        <Route path="/productCard" element={<ProductCard />} />
         <Route path="/productPanel" element={<ProductPanel />} />
         <Route path="/productBox" element={<ProductBox />} />
         <Route path="/phoneFiltr" element={<PhoneFiltr />} />

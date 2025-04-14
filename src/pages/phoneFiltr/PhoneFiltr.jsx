@@ -7,7 +7,7 @@ import { TbMenuDeep } from 'react-icons/tb'
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import ProductBox from '../../components/productBox/ProductBox'
-import ProductCard from '../../components/productCard/ProductCard'
+// import ProductCard from '../../components/productCard/ProductCard'
 import ProductPanel from '../../components/productPanel/ProductPanel'
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Liked.css";
-import ProductCard from "../../components/productCard/ProductCard";
+// import ProductCard from "../../components/productCard/ProductCard";
 import ProductBox from "../../components/productBox/ProductBox";
 function Liked() {
   return (
