@@ -151,7 +151,6 @@ function Home({ products, getData }) {
                 <ProductBox />
                 <ProductBox />
                 <ProductBox />
-                <ProductBox />
               </div>
             </div>
           </section>
