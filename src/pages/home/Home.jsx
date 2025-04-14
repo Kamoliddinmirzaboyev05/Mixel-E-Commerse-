@@ -76,6 +76,7 @@ function Home({ products, getData }) {
                 {products?.results?.map((item) => {
                   return (
                     <ProductBox key={item.id} item={item} getData={getData} />
+                    
                   );
                 })}
               </div>
