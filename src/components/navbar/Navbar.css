@@ -10,7 +10,14 @@
   color: white;
   transition: all 5s ease;
 }
-
+.categoryIcon img{
+  object-fit: contain;
+  width: 30px;
+  height: 30px;
+}
+.categoryNames{
+  padding-top: 30px;
+}
 .NavTopLeft {
   display: flex;
   gap: 50px;

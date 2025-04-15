@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import React, { useRef, useState } from 'react';
 import "./Home.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,6 +14,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 // import ProductCard from "../../components/productCard/ProductCard";
 import ProductBox from "../../components/productBox/ProductBox";
 import ProductPanel from "../../components/productPanel/ProductPanel";
+
 
 function Home({ products, getData }) {
   return (
@@ -76,9 +78,57 @@ function Home({ products, getData }) {
                 {products?.results?.map((item) => {
                   return (
                     <ProductBox key={item.id} item={item} getData={getData} />
-                    
                   );
-                })}
+                }) ||
+                  [1, 2, 3, 4, 5, 1, 2, 3, 4, 5].map((item) => {
+                    return (
+                      <div className="loadingSkeletons">
+                        <Skeleton
+                          variant="rectangular"
+                          width={240}
+                          height={210}
+                        />
+                        <Skeleton
+                          variant="rectangular"
+                          style={{ marginTop: "30px" }}
+                          width={240}
+                          height={18}
+                        />
+                        <Skeleton
+                          variant="rectangular"
+                          style={{ marginTop: "20px" }}
+                          width={240}
+                          height={32}
+                        />
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                          }}
+                          className="skeletonButtons"
+                        >
+                          <Skeleton
+                            variant="rectangular"
+                            style={{ marginTop: "20px" }}
+                            width={50}
+                            height={42}
+                          />
+                          <Skeleton
+                            variant="rectangular"
+                            style={{ marginTop: "20px" }}
+                            width={50}
+                            height={42}
+                          />
+                          <Skeleton
+                            variant="rectangular"
+                            style={{ marginTop: "20px" }}
+                            width={50}
+                            height={42}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
               </div>
             </div>
           </section>
@@ -86,30 +136,16 @@ function Home({ products, getData }) {
             <div className="container">
               <h3>Популярные категории</h3>
               <div className="box2">
-                <div className="box2-1">
-                  <h4>Компьютеры</h4>
-                  <div>
-                    <img src="/imgs/Computer 1.svg" alt="" />
-                  </div>
-                </div>
-                <div className="box2-1">
-                  <h4>Компьютеры</h4>
-                  <div>
-                    <img src="/imgs/Computer 1.svg" alt="" />
-                  </div>
-                </div>
-                <div className="box2-1">
-                  <h4>Компьютеры</h4>
-                  <div>
-                    <img src="/imgs/Computer 1.svg" alt="" />
-                  </div>
-                </div>
-                <div className="box2-1">
-                  <h4>Компьютеры</h4>
-                  <div>
-                    <img src="/imgs/Computer 1.svg" alt="" />
-                  </div>
-                </div>
+                {categories?.results?.map((category) => {
+                  return (
+                    <div className="box2-1">
+                      <h4>Компьютеры</h4>
+                      <div>
+                        <img src="/imgs/Computer 1.svg" alt="" />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </section>

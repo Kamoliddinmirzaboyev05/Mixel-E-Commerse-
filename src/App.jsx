@@ -16,6 +16,7 @@ import Comparison from "./pages/comparison/Comparison";
 import Login from "./pages/login/Login";
 import SignUp from "./pages/signup/SignUp";
 import { Bounce, ToastContainer } from "react-toastify";
+import { SkeletonTheme } from "react-loading-skeleton";
 function App() {
   const [userData, setUserData] = useState(null);
   const [products, setProducts] = useState(null);
@@ -64,43 +65,66 @@ function App() {
     }, []);
   }
 
+  // getcategories function
+
+  const [categories, setCategories] = useState(null);
+  const getCategories = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("https://abzzvx.pythonanywhere.com/categories/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setCategories(result);
+        console.log(result);
+      })
+      .catch((error) => console.error(error));
+  };
+  useEffect(() => {
+    getCategories();
+  }, []);
+
   return (
-    <BrowserRouter>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick={false}
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-        transition={Bounce}
-      />
-      <Navbar />
-      <Routes>
-        <Route
-          path="/"
-          element={<Home products={products} getData={getData} />}
+    <SkeletonTheme baseColor="#fafafa" highlightColor="#ccc">
+      <BrowserRouter>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+          transition={Bounce}
         />
-        <Route path="/productPanel" element={<ProductPanel />} />
-        <Route path="/productBox" element={<ProductBox />} />
-        <Route path="/phoneFiltr" element={<PhoneFiltr />} />
-        <Route path="/phoneFiltrAlot" element={<PhoneFiltrAlot />} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/liked" element={<Liked />} />
-        <Route path="/comparison" element={<Comparison />} />
-        <Route
-          path="/dashboard"
-          element={<Dashboard userData={userData}/>}
-        />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={<Home products={products} getData={getData} />}
+          />
+          <Route path="/productPanel" element={<ProductPanel />} />
+          <Route path="/productBox" element={<ProductBox />} />
+          <Route path="/phoneFiltr" element={<PhoneFiltr />} />
+          <Route path="/phoneFiltrAlot" element={<PhoneFiltrAlot />} />
+          <Route path="/product/:id" element={<Product />} />
+          <Route path="/liked" element={<Liked />} />
+          <Route path="/comparison" element={<Comparison />} />
+          <Route
+            path="/dashboard"
+            element={<Dashboard userData={userData} />}
+          />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </SkeletonTheme>
   );
 }
 

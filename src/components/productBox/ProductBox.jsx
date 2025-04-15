@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./ProductBox.css"
+import "./ProductBox.css";
 function ProductBox({ item, getData }) {
   return (
     <>
@@ -11,13 +11,13 @@ function ProductBox({ item, getData }) {
           </div>
           <div className="Box4Narx">
             <div>
-              <p>529 000 сум</p>
+              <p>{item?.price} сум</p>
             </div>
             <div>
               <h3>{item?.monthly_price} сум/мес</h3>
             </div>
           </div>
-          <h3 className="Title4">{item?.name}</h3>
+          <h3 className="Title4">{String(item?.name).slice(0, 28)}</h3>
 
           <div className="Box4Tovar">
             <div>
