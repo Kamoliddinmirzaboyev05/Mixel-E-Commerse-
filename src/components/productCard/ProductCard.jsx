@@ -2,10 +2,13 @@ import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 function ProductCard({ item, getData }) {
+  const shortenedName = item.name.length > 13 ? `${item.name.slice(0,13 )}...` : item.name;
+  const shortenedPrice = item.price.toString().length > 10 ? `${item.price.toString().slice(0, 10)}...` : item.price;
+
   return (
     <div className="box1-1">
       <Link to={`/product/${item.id}`} >
-        <img src="/imgs/lWGeSFc0Y6jBoVxA4hQw-home_default 1.png" alt="" />
+        <img src={item.images.image} alt="" />
         <div className="chegirma">
           <div>
             <p>
@@ -14,21 +17,21 @@ function ProductCard({ item, getData }) {
           </div>
         </div>
         <div className="Box1Narx">
-        <div>
+          <div>
             <h3>
-            ${item.price}
+              {shortenedPrice}
             </h3>
           </div>
           <div>
             <p>
-            <span>moony/</span>
-            ${item.monthly_price}
+              <span>moony/</span>
+              {item.monthly_price}
             </p>
           </div>
-          
+
         </div>
         <h3 className='Title'>
-          {item.name}
+          {shortenedName}
         </h3>
         <p className='Title2'>
           Предложение заканчивается через:
