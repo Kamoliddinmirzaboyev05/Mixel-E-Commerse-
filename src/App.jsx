@@ -55,14 +55,10 @@ function App() {
   //     })
   //     .catch((error) => console.error(error));
   // };
-  if (localStorage.getItem("mixelToken")) {
-    useEffect(() => {
-      // if (localStorage.getItem("mixelToken")) {
-      //   getUser();
-      // }
-      getData();
-    }, []);
-  }
+
+  useEffect(() => {
+    getData();
+  }, []);
 
   // getcategories function
 
