@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Product.css";
 import { Link, useParams } from "react-router-dom";
 import ProductPanel from "../../components/productPanel/ProductPanel";
+import Skeleton from "react-loading-skeleton";
 function Product() {
   const id = useParams();
-
+  const [mainImgIndex, setMainImgIndex] = useState(0);
   const [oneProductData, setOneProductData] = useState(null);
   const getOneProductData = () => {
     const requestOptions = {
@@ -55,28 +56,109 @@ function Product() {
           <div className="productCards">
             <div className="productCardImgs">
               <div className="productCardImg">
-                <img src={oneProductData?.images[0]?.image} alt="" />
+                {oneProductData && (
+                  <img
+                    src={oneProductData?.images[mainImgIndex]?.image}
+                    alt=""
+                  />
+                )}
+                {!oneProductData && (
+                  <Skeleton
+                    variant="rectangular"
+                    style={{ marginTop: "30px" }}
+                    width={300}
+                    height={260}
+                  />
+                )}
               </div>
               <div className="productCardImgssss">
-                <div>
-                  <img src={oneProductData?.images[1]?.image} alt="" />
+                <div className="itemImg" onClick={()=>{
+                  setMainImgIndex(0)
+                }}>
+                  {oneProductData && (
+                    <img src={oneProductData?.images[0]?.image} alt="" />
+                  )}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      style={{ marginTop: "30px" }}
+                      width={64}
+                      height={64}
+                    />
+                  )}
                 </div>
-                <div>
-                  <img src={oneProductData?.images[2]?.image} alt="" />
+                <div
+                  className="itemImg" onClick={() => {
+                    setMainImgIndex(1);
+                  }}
+                >
+                  {oneProductData && (
+                    <img src={oneProductData?.images[1]?.image} alt="" />
+                  )}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      style={{ marginTop: "30px" }}
+                      width={64}
+                      height={64}
+                    />
+                  )}
                 </div>
-                <div>
-                  <img src={oneProductData?.images[3]?.image} alt="" />
+                <div
+                  className="itemImg" onClick={() => {
+                    setMainImgIndex(2);
+                  }}
+                >
+                  {oneProductData && (
+                    <img src={oneProductData?.images[2]?.image} alt="" />
+                  )}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      style={{ marginTop: "30px" }}
+                      width={64}
+                      height={64}
+                    />
+                  )}
                 </div>
-                <div>
-                  <img src={oneProductData?.images[0]?.image} alt="" />
+                <div className="itemImg" onClick={()=>{
+                  setMainImgIndex(3)
+                }}>
+                  {oneProductData && (
+                    <img src={oneProductData?.images[3]?.image} alt="" />
+                  )}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      style={{ marginTop: "30px" }}
+                      width={64}
+                      height={64}
+                    />
+                  )}
                 </div>
               </div>
             </div>
             <div className="ProductTitle">
-              <h1>{oneProductData?.name}</h1>
+              {oneProductData && <h1>{oneProductData?.name}</h1>}
+              {!oneProductData && (
+                <Skeleton
+                  variant="rectangular"
+                  // style={{ marginTop: "30px" }}
+                  width={400}
+                  height={32}
+                />
+              )}
               <div className="productPrise">
                 <div>
-                  <p>{oneProductData?.price} cум</p>
+                  {oneProductData && <p>{oneProductData?.price} cум</p>}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      // style={{ marginTop: "30px" }}
+                      width={200}
+                      height={24}
+                    />
+                  )}
                 </div>
                 <div className="Box5Tovar">
                   <div>
@@ -112,9 +194,19 @@ function Product() {
               <div className="ProductMinText">
                 <div>
                   <p className="productMinSiz">Название для договора</p>
-                  <p>
-                    {oneProductData?.name} {oneProductData?.details}
-                  </p>
+                  {oneProductData && (
+                    <p>
+                      {oneProductData?.name} {oneProductData?.details}
+                    </p>
+                  )}
+                  {!oneProductData && (
+                    <Skeleton
+                      variant="rectangular"
+                      // style={{ marginTop: "30px" }}
+                      width={400}
+                      height={32}
+                    />
+                  )}
                 </div>
               </div>
               <div className="ProductMinText">

@@ -7,24 +7,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
-function Navbar() {
+function Navbar({ getCategories, categories }) {
   const [isOpen, setOpen] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
-  const [categories, setCategories] = useState(null);
-  const getCategories = () => {
-    const requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
 
-    fetch("https://abzzvx.pythonanywhere.com/categories/", requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        setCategories(result);
-        console.log(result);
-      })
-      .catch((error) => console.error(error));
-  };
   useEffect(() => {
     getCategories();
   }, []);
@@ -114,7 +100,12 @@ function Navbar() {
             </div>
             <div className="CategoryTovar">
               {categories?.results?.map((category) => {
-                return <p>{category?.name}</p>;
+                return (
+                  <Link to={`/phoneFiltr/${category.id}`}>
+                    {" "}
+                    <p>{category?.name}</p>
+                  </Link>
+                );
               })}
             </div>
           </div>

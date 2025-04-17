@@ -14,9 +14,11 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 // import ProductCard from "../../components/productCard/ProductCard";
 import ProductBox from "../../components/productBox/ProductBox";
 import ProductPanel from "../../components/productPanel/ProductPanel";
+import { Link } from "react-router-dom";
 
+function Home({ categories, getCategories, products, getData }) {
+  console.log(products);
 
-function Home({ products, getData }) {
   return (
     <div className="home">
       <div>
@@ -136,16 +138,37 @@ function Home({ products, getData }) {
             <div className="container">
               <h3>Популярные категории</h3>
               <div className="box2">
-                {categories?.results?.map((category) => {
-                  return (
-                    <div className="box2-1">
-                      <h4>Компьютеры</h4>
-                      <div>
-                        <img src="/imgs/Computer 1.svg" alt="" />
-                      </div>
-                    </div>
-                  );
-                })}
+                <Swiper
+                  slidesPerView={4}
+                  spaceBetween={true}
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: false,
+                  }}
+                  loop={true}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  navigation={true}
+                  modules={[Autoplay, Pagination, Navigation]}
+                  className="mySwiper"
+                >
+                  {categories?.results?.map((category) => {
+                    return (
+                      <SwiperSlide>
+                        <Link
+                          to={`/phoneFiltr/:${category.id}`}
+                          className="box2-1"
+                        >
+                          <h4>{category?.name}</h4>
+                          <div className="categoryImg">
+                            <img src={category?.image} alt="" />
+                          </div>
+                        </Link>
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
               </div>
             </div>
           </section>
@@ -245,3 +268,22 @@ function Home({ products, getData }) {
 }
 
 export default Home;
+
+[
+  {
+    brand: [
+      { title: "acer", id: 0 },
+      { title: "Hp", id: 1 },
+    ],
+    ozu: [
+      {
+        title: "16 gb",
+        id: 0,
+      },
+      {
+        title: "32 gb",
+        id: 1,
+      },
+    ],
+  },
+];

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductBox.css";
-function ProductBox({ item, getData }) {
+function ProductBox({ item }) {
   return (
     <>
       <Link to={`/product/${item?.id}`}>

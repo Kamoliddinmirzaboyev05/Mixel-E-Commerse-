@@ -30,7 +30,6 @@ function App() {
     fetch("https://abzzvx.pythonanywhere.com/products/", requestOptions)
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         setProducts(result);
       })
       .catch((error) => console.error(error));
@@ -78,7 +77,6 @@ function App() {
       .then((response) => response.json())
       .then((result) => {
         setCategories(result);
-        console.log(result);
       })
       .catch((error) => console.error(error));
   };
@@ -102,15 +100,32 @@ function App() {
           theme="light"
           transition={Bounce}
         />
-        <Navbar />
+        <Navbar categories={categories} getCategories={getCategories} />
         <Routes>
           <Route
             path="/"
-            element={<Home products={products} getData={getData} />}
+            element={
+              <Home
+                getCategories={getCategories}
+                categories={categories}
+                products={products}
+                getData={getData}
+              />
+            }
           />
           <Route path="/productPanel" element={<ProductPanel />} />
           <Route path="/productBox" element={<ProductBox />} />
-          <Route path="/phoneFiltr" element={<PhoneFiltr />} />
+          <Route
+            path="/phoneFiltr/:id"
+            element={
+              <PhoneFiltr
+                products={products}
+                getData={getData}
+                categories={categories}
+                getCategories={getCategories}
+              />
+            }
+          />
           <Route path="/phoneFiltrAlot" element={<PhoneFiltrAlot />} />
           <Route path="/product/:id" element={<Product />} />
           <Route path="/liked" element={<Liked />} />

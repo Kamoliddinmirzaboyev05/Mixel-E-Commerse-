@@ -51,7 +51,16 @@
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-
+.categoryImg {
+  width: 100px;
+  height: 100px;
+}
+.categoryImg img {
+  width: 100px;
+  object-fit: cover;
+  height: 100px;
+  mix-blend-mode: multiply;
+}
 .Box1 {
   display: flex;
   justify-content: start;
@@ -178,26 +187,21 @@
 }
 
 .box2-1 {
+  padding: 20px;
   width: 280px;
   border: 1px solid rgba(242, 242, 242, 1);
   display: flex;
+  justify-content: space-between;
   border-radius: 5px;
-
+  align-items: center;
   position: relative;
 }
-
-.box2-1 img {
-  position: absolute;
-  right: 0px;
-  top: -15px;
+.box2 .swiper-slide{
+  margin-bottom: 30px;
 }
-
 .box2-1 h4 {
   font-size: 16px;
   font-weight: 400;
-  padding-top: 20px;
-  padding-left: 30px;
-  padding-bottom: 80px;
 }
 
 /* section3 start  */
