@@ -18,55 +18,67 @@ import { Link } from "react-router-dom";
 
 function Home({ categories, getCategories, products, getData }) {
   console.log(products);
+  // getBanner function
+  const [banner, setBanner] = useState(null);
+  const getBanner = () => {
+    const requestOptions = {
+      method: "GET",
+      redirect: "follow",
+    };
+
+    fetch("https://abzzvx.pythonanywhere.com/galary/", requestOptions)
+      .then((response) => response.json())
+      .then((result) => {
+        setBanner(result);
+        console.log(result);
+      })
+      .catch((error) => console.error(error));
+  };
+
+  useEffect(() => {
+    getBanner();
+  }, []);
 
   return (
     <div className="home">
       <div>
         <div className="hero">
           <div className="container">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={true}
-              autoplay={{
-                delay: 2000,
-                disableOnInteraction: false,
-              }}
-              loop={true}
-              pagination={{
-                clickable: true,
-              }}
-              navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="heroBanner"></div>
-              </SwiperSlide>
-            </Swiper>
+            {banner && (
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={true}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                }}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                navigation={true}
+                modules={[Autoplay, Pagination, Navigation]}
+                className="mySwiper"
+              >
+                {banner?.results.map((item) => {
+                  return (
+                    <SwiperSlide>
+                      <div className="heroBanner">
+                        <img src={item?.image} alt="" />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            )}{" "}
+            {!banner && (
+              <Skeleton
+                variant="rectangular"
+                style={{ marginTop: "60px", marginBottom: "10px" }}
+                width={1300}
+                height={324}
+              />
+            )}
           </div>
         </div>
         <main>
@@ -224,14 +236,13 @@ function Home({ categories, getCategories, products, getData }) {
                   <img src="/imgs/newHotRus 1.png" alt="" />
                 </div>
                 <div className="box5-2">
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
-                  <ProductPanel />
+                  {products?.results?.map((item) => {
+                    if (item.discount) {
+                      return <ProductBox item={item} />;
+                    } else {
+                      return;
+                    }
+                  })}
                 </div>
               </div>
             </div>

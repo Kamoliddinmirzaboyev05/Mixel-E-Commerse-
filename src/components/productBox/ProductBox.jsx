@@ -7,6 +7,11 @@ function ProductBox({ item }) {
       <Link to={`/product/${item?.id}`}>
         <div className="box4-1">
           <div className="cardImg">
+            {item?.discount && (
+              <div className="discVal">
+                <p>{item.discount}%</p>
+              </div>
+            )}
             <img src={item?.images[0]?.image} alt="" />
           </div>
           <div className="Box4Narx">

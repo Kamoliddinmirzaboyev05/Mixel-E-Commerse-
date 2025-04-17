@@ -11,14 +11,24 @@ import ProductPanel from "../../components/productPanel/ProductPanel";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import { Link, useParams } from "react-router-dom";
+import ProductAlotCard from "../../components/productAlotCard/ProductAlotCard";
 
 function PhoneFiltr({ products, getData, getCategories, categories }) {
   const [value, setValue] = useState([20, 70]);
   const id = useParams();
+  const [isGrid, setIsGrid] = useState(true);
   const categoryName = categories?.results.filter((item) => {
     return item.id == id.id;
   });
+  console.log(products);
 
+  const filteredProducts = products?.results?.filter((item) => {
+    return item.category == id.id;
+  });
+
+  console.log(filteredProducts);
+
+  // function for range
   function valuetext(value) {
     return `${value}°C`;
   }
@@ -32,7 +42,7 @@ function PhoneFiltr({ products, getData, getCategories, categories }) {
     window.scrollTo({
       top: "0",
     });
-  }, []);
+  }, [id.id]);
 
   return (
     <>
@@ -87,16 +97,24 @@ function PhoneFiltr({ products, getData, getCategories, categories }) {
                 </div>
               </div>
               <div className="smatfonTitleMenu">
-                <Link to={"/phoneFiltr"} className="activeFiltr">
-                  <div>
+                <div className={isGrid ? "activeFiltr" : ""}>
+                  <div
+                    onClick={() => {
+                      setIsGrid(true);
+                    }}
+                  >
                     <CgMenuGridR />
                   </div>
-                </Link>
-                <Link to={"/phoneFiltrAlot"}>
-                  <div>
+                </div>
+                <div className={!isGrid ? "activeFiltr" : ""}>
+                  <div
+                    onClick={() => {
+                      setIsGrid(false);
+                    }}
+                  >
                     <GiHamburgerMenu />
                   </div>
-                </Link>
+                </div>
               </div>
             </div>
             <div className="smartfonBlock">
@@ -303,11 +321,11 @@ function PhoneFiltr({ products, getData, getCategories, categories }) {
               </div>
               <div className="smartfonRight">
                 <div className="smartfonRightCards">
-                  {products?.results?.map((item) => {
-                    if (item?.category == id) {
+                  {filteredProducts?.map((item) => {
+                    if (isGrid) {
                       return <ProductBox item={item} />;
                     } else {
-                      return;
+                      return <ProductAlotCard item={item} />;
                     }
                   })}
                 </div>

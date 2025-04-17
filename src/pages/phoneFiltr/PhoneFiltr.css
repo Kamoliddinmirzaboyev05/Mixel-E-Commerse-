@@ -174,7 +174,8 @@ i {
 /* =================================================== */
 .smartfonRightCards{
     display: flex;
-    justify-content: start;
+    width: 1000px;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 23px;
 }

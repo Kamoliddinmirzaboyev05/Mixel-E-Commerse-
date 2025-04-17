@@ -7,6 +7,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { Link } from "react-router-dom";
 import Hamburger from "hamburger-react";
+import Skeleton from "react-loading-skeleton";
 function Navbar({ getCategories, categories }) {
   const [isOpen, setOpen] = useState(false);
   const [isOpenModal, setOpenModal] = useState(false);
@@ -88,6 +89,7 @@ function Navbar({ getCategories, categories }) {
               <button
                 onClick={() => {
                   setOpenModal(!isOpenModal);
+                  setOpen(!isOpen);
                 }}
               >
                 <div>
@@ -107,6 +109,17 @@ function Navbar({ getCategories, categories }) {
                   </Link>
                 );
               })}
+              {!categories &&
+                [1, 1, 1, 1, 1].map((item) => {
+                  return (
+                    <Skeleton
+                      variant="rectangular"
+                      style={{ marginTop: "10px" }}
+                      width={165}
+                      height={18}
+                    />
+                  );
+                })}
             </div>
           </div>
         </div>
