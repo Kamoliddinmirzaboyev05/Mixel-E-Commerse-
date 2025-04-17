@@ -67,7 +67,7 @@
 }
 .Box1 {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   gap: 25px;
   align-items: stretch;
   flex-wrap: wrap;
